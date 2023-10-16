@@ -1,0 +1,209 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > Contact</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">&lt;empty package name&gt;</a>
+</div>
+
+<h1>Coverage Summary for Class: Contact (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Contact</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (12/12)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (61/61)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;import java.util.Random;
+&nbsp;
+&nbsp;public class Contact {
+&nbsp;    private int contactID;
+&nbsp;    private String firstName;
+&nbsp;    private String lastName;
+&nbsp;    private String phone;
+&nbsp;    private String address;
+&nbsp;
+<b class="fc">&nbsp;    public Contact(int contactID, String firstName, String lastName, String phone, String address) {</b>
+<b class="fc">&nbsp;        setContactID(contactID);</b>
+<b class="fc">&nbsp;        setFirstName(firstName);</b>
+<b class="fc">&nbsp;        setLastName(lastName);</b>
+<b class="fc">&nbsp;        setPhone(phone);</b>
+<b class="fc">&nbsp;        setAddress(address);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public static int generateUniqueID() {
+<b class="fc">&nbsp;        int charLen = 9;</b>
+<b class="fc">&nbsp;        String characters = &quot;0123456789&quot;;</b>
+&nbsp;
+<b class="fc">&nbsp;        StringBuilder strBuilder = new StringBuilder();</b>
+<b class="fc">&nbsp;        Random random = new Random();</b>
+&nbsp;
+<b class="fc">&nbsp;        for (int i = 0; i &lt; charLen; i++) {</b>
+<b class="fc">&nbsp;            int index = random.nextInt(characters.length());</b>
+<b class="fc">&nbsp;            char randomChar = characters.charAt(index);</b>
+<b class="fc">&nbsp;            strBuilder.append(randomChar);</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        String randomStr = strBuilder.toString();</b>
+<b class="fc">&nbsp;</b>
+<b class="fc">&nbsp;        int randomId = Integer.parseInt(randomStr);</b>
+<b class="fc">&nbsp;</b>
+<b class="fc">&nbsp;        return randomId;</b>
+&nbsp;    }
+<b class="fc">&nbsp;</b>
+<b class="fc">&nbsp;    public int getContactID() { return this.contactID; }</b>
+&nbsp;
+<b class="fc">&nbsp;    public void setContactID(int contactID) {</b>
+<b class="fc">&nbsp;        String contactIDToString = Integer.toString(contactID);</b>
+<b class="fc">&nbsp;</b>
+<b class="fc">&nbsp;        if (contactIDToString == null || contactID &gt; 10) {</b>
+<b class="fc">&nbsp;            this.contactID = -1;</b>
+<b class="fc">&nbsp;            System.err.println(&quot;Contact ID must not be null and cannot exceed 10 characters.&quot;);</b>
+<b class="fc">&nbsp;        } else {</b>
+<b class="fc">&nbsp;            this.contactID = contactID;</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;
+<b class="fc">&nbsp;    public String getFirstName() {</b>
+<b class="fc">&nbsp;        return this.firstName;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+<b class="fc">&nbsp;    public void setFirstName(String firstName) {</b>
+<b class="fc">&nbsp;        if (firstName == null || firstName.length() &gt; 10) {</b>
+<b class="fc">&nbsp;            this.firstName = null;</b>
+<b class="fc">&nbsp;            System.err.println(&quot;First name must not be null and cannot exceed 10 characters.&quot;);</b>
+<b class="fc">&nbsp;        } else {</b>
+<b class="fc">&nbsp;            this.firstName = firstName;</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;
+<b class="fc">&nbsp;    public String getLastName() {</b>
+<b class="fc">&nbsp;        return this.lastName;</b>
+&nbsp;    }
+&nbsp;
+<b class="fc">&nbsp;    public void setLastName(String lastName) {</b>
+<b class="fc">&nbsp;        if (lastName == null || lastName.length() &gt; 10) {</b>
+<b class="fc">&nbsp;            this.lastName = null;</b>
+<b class="fc">&nbsp;            System.err.println(&quot;Last name must not be null and cannot exceed 10 characters.&quot;);</b>
+<b class="fc">&nbsp;        } else {</b>
+<b class="fc">&nbsp;            this.lastName = lastName;</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+<b class="fc">&nbsp;    public String getPhone() {</b>
+<b class="fc">&nbsp;        return this.phone;</b>
+&nbsp;    }
+&nbsp;
+<b class="fc">&nbsp;    public void setPhone(String phone) {</b>
+<b class="fc">&nbsp;        if (phone == null || phone.length() != 10) {</b>
+<b class="fc">&nbsp;            this.phone = null;</b>
+<b class="fc">&nbsp;            System.err.println(&quot;Phone number must not be null and must be exactly 10 digits.&quot;);</b>
+<b class="fc">&nbsp;        } else {</b>
+<b class="fc">&nbsp;            this.phone = phone;</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+<b class="fc">&nbsp;    public String getAddress() {</b>
+<b class="fc">&nbsp;        return this.address;</b>
+&nbsp;    }
+&nbsp;
+<b class="fc">&nbsp;    public void setAddress(String address) {</b>
+<b class="fc">&nbsp;        if (address == null || address.length() &gt; 30) {</b>
+<b class="fc">&nbsp;            this.address = null;</b>
+<b class="fc">&nbsp;            System.err.println(&quot;Address must not be null and cannot exceed 30 characters.&quot;);</b>
+<b class="fc">&nbsp;        } else {</b>
+<b class="fc">&nbsp;            this.address = address;</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-10-03 20:55</div>
+</div>
+</body>
+</html>
