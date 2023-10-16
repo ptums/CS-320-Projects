@@ -8,5 +8,8 @@ Files:
 - `ContactService.java`
 - `ContactTest.java`
 - `ContactServiceTest.java`
-- 
+- `Tasks.java`
+- `TasksService.java`
+- `TasksTest.java`
+- `TasksServiceTest.java`
 In Project One, I worked on testing and automation in software development. These files demonstrate my ability to create unit tests using code to uncover errors, analyze various approaches to software testing based on requirements, and apply appropriate testing strategies to meet those requirements.
