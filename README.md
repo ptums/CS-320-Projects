@@ -4,12 +4,17 @@ In this repository, I have compiled a collection of files that showcase my work 
 
 Project One - Software Testing and Automation
 Files:
+- `Appointment.java`-
+- `AppointmentService.java`
+- `AppointmentTest.java`
+- `AppointmentServiceTest.java`
 - `Contact.java`
 - `ContactService.java`
 - `ContactTest.java`
 - `ContactServiceTest.java`
-- `Tasks.java`
-- `TasksService.java`
-- `TasksTest.java`
-- `TasksServiceTest.java`
-In Project One, I worked on testing and automation in software development. These files demonstrate my ability to create unit tests using code to uncover errors, analyze various approaches to software testing based on requirements, and apply appropriate testing strategies to meet those requirements.
+- `Task.java`
+- `TaskService.java`
+- `TaskTest.java`
+- `TestServiceTest.java`
+
+In Project One, I worked on ensuring every class achieved 100% coverage in terms of classes, methods, and lines. By trying to get 100% coverage, I exercised my ability to create unit tests that uncovered unforseen errors, analyze various approaches to software testing based on requirements, and apply appropriate testing strategies to meet those requirements.
