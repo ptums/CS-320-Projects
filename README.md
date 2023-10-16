@@ -2,7 +2,8 @@
 
 In this repository, I have compiled a collection of files that showcase my work in software testing, automation, and quality assurance. This portfolio consists of submissions from two projects, each highlighting different aspects of my skills and expertise. Additionally, you will find reflections on my work, which provide valuable context for future reference.
 
-Project One - Software Testing and Automation
+## Project One - Software Testing and Automation
+
 Files:
 - `Appointment.java`-
 - `AppointmentService.java`
